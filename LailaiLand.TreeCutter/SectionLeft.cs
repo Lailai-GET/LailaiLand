@@ -2,7 +2,7 @@
 {
     internal class SectionLeft : ScreenSection
     {
-        public SectionLeft(string path) : base(path)
+        public SectionLeft(string path, bool branch, bool dude) : base(path, branch, dude)
         {
             var newStringArray = new string[7];
             for (var i = 0; i < _document.Length; i++)

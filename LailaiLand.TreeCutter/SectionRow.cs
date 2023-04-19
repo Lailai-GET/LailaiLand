@@ -4,13 +4,13 @@
     {
         private List<ScreenSection> _row;
 
-        public SectionRow(string leftPath, string centerPath, string rightPath)
+        public SectionRow(string leftPath, string centerPath, string rightPath, bool branch, bool dude)
         {
             _row = new List<ScreenSection>
             {
-                new SectionLeft(leftPath),
-                new SectionCenter(centerPath),
-                new SectionRight(rightPath),
+                new SectionLeft(leftPath, branch, dude),
+                new SectionCenter(centerPath, branch, dude),
+                new SectionRight(rightPath, branch, dude),
             };
         }
 

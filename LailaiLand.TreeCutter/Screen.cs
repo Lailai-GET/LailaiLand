@@ -16,8 +16,8 @@
         {
             _rows = new List<SectionRow>();
             GenerateRandomRow();
-            _rows.Add(new SectionRow(Empty, Trunk, Empty));
-            _rows.Add(new SectionRow(Empty, Trunk, Dude));
+            _rows.Add(new SectionRow(Empty, Trunk, Empty, false, false, false, false, false));
+            _rows.Add(new SectionRow(Empty, Trunk, Dude, false, false, false, true, false));
         }
 
         private void GenerateRandomRow()
@@ -27,13 +27,13 @@
             switch (branchSide)
             {
                 case 0:
-                    _rows.Add(new SectionRow(Branches[branchSide], Trunk, Empty));
+                    _rows.Add(new SectionRow(Branches[branchSide], Trunk, Empty, true, false, false, false, false));
                     break;
                 case 1:
-                    _rows.Add(new SectionRow(Empty, Trunk, Branches[branchSide]));
+                    _rows.Add(new SectionRow(Empty, Trunk, Branches[branchSide], false, true, false, false, false));
                     break;
                 default:
-                    _rows.Add(new SectionRow(Empty, Trunk, Empty));
+                    _rows.Add(new SectionRow(Empty, Trunk, Empty, false, false, false, false, false));
                     break;
             }
         }
@@ -45,5 +45,11 @@
                 row.WriteRow();
             }
         }
+
+        //public void MoveLeft()
+        //{
+            
+        //    _rows[2] = new SectionRow(/*lag fin en her hvor en hugger til høyre*/)
+        //}
     }
 }
