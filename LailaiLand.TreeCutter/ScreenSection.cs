@@ -3,14 +3,13 @@
     internal class ScreenSection
     {
         protected string[] Document;
-        protected bool Branch = false;
-        protected bool Dude = false;
+        public bool Branch { get; protected set; }
+        public bool Dude { get; protected set; }
 
-        protected ScreenSection(string path, bool branch, bool dude)
+        protected ScreenSection(string path)
         {
             Document = File.ReadAllLines(path);
-            Branch = branch;
-            Dude = dude;
+
         }
 
         public void DrawLine(int y)

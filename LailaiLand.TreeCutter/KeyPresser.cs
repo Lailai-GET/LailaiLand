@@ -21,22 +21,13 @@
                 {
                     break;
                 }
-
-                if (_keyInfo.Key == ConsoleKey.UpArrow)
+                if (_keyInfo.Key == ConsoleKey.LeftArrow)
                 {
-                    Console.WriteLine("Up arrow key pressed");
-                }
-                else if (_keyInfo.Key == ConsoleKey.DownArrow)
-                {
-                    Console.WriteLine("Down arrow key pressed");
-                }
-                else if (_keyInfo.Key == ConsoleKey.LeftArrow)
-                {
-                    Console.WriteLine("Left arrow key pressed");
+                    _screen.MoveLeft();
                 }
                 else if (_keyInfo.Key == ConsoleKey.RightArrow)
                 {
-                    Console.WriteLine("Right arrow key pressed");
+                    _screen.MoveRight();
                 }
             } while (true);
         }

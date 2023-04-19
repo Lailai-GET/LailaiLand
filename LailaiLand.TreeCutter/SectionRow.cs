@@ -2,15 +2,15 @@
 {
     internal class SectionRow
     {
-        private List<ScreenSection> _row;
+        public List<ScreenSection> Row { get; }
 
-        public SectionRow(string leftPath, string centerPath, string rightPath, bool branch, bool dude)
+        public SectionRow(string leftPath, bool leftBranch, bool leftDude, string centerPath, string rightPath, bool rightBranch, bool rightDude)
         {
-            _row = new List<ScreenSection>
+            Row = new List<ScreenSection>
             {
-                new SectionLeft(leftPath, branch, dude),
-                new SectionCenter(centerPath, branch, dude),
-                new SectionRight(rightPath, branch, dude),
+                new SectionLeft(leftPath, leftBranch, leftDude),
+                new SectionCenter(centerPath),
+                new SectionRight(rightPath, rightBranch, rightDude)
             };
         }
 
@@ -18,7 +18,7 @@
         {
             for (int i = 0; i < 7; i++)
             {
-                foreach (var section in _row)
+                foreach (var section in Row)
                 { 
                     section.DrawLine(i);
                 }
