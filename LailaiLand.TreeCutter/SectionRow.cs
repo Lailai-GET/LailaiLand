@@ -4,7 +4,13 @@
     {
         public List<ScreenSection> Row { get; }
 
-        public SectionRow(string leftPath, bool leftBranch, bool leftDude, string centerPath, string rightPath, bool rightBranch, bool rightDude)
+        public SectionRow(string leftPath,
+            bool leftBranch,
+            bool leftDude,
+            string centerPath,
+            string rightPath,
+            bool rightBranch,
+            bool rightDude)
         {
             Row = new List<ScreenSection>
             {
